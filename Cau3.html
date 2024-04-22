@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = +prompt("Nhập 1 số bất kì ");
+    function sumOfListPrime(x) {
+        let sum = 0;
+        for (let i = 2; i <= x; i++) {
+            if (isPrime(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+    function isPrime(num) {
+        if (num < 2) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    }
+    alert("Tổng số nguyên tố từ 0 đến "+ x + " là " +sumOfListPrime(12));
+</script>
+</body>
+</html>
